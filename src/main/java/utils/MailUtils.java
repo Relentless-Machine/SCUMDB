@@ -37,8 +37,8 @@ public class MailUtils {
      */
     public static void sendMail(String to, String subject, String content) throws MessagingException {
         // 添加更详细的属性以禁用SSL/TLS
-        props.put("mail.smtp.starttls.enable", "false");
-        props.put("mail.smtp.ssl.enable", "false");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.ssl.enable", "true");
 
         // 1. 获取与邮件服务器的会话
         Session session = Session.getInstance(props, new Authenticator() {
